@@ -1,17 +1,11 @@
 
 
-def pytest_collection_modifyitems(items, config):
-    seen = set()
-    remaining = []
-    deselected = []
-    for item in items:
-        if item.nodeid not in seen:
-            seen.add(item.nodeid)
-            remaining.append(item)
-        else:
-            deselected.append(item)
+_seen = set()
 
-    if deselected:
-        config.hook.pytest_deselected(items=deselected)
-        items[:] = remaining
 
+def pytest_ignore_collect(path, config):
+    if path in _seen:
+        return True
+    else:
+        _seen.add(path)
+        return None
