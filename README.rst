@@ -1,6 +1,9 @@
 pytest-drop-dup-tests
 ===================================
 
+.. image:: http://img.shields.io/pypi/v/pytest-drop-dup-tests.svg
+   :target: https://pypi.python.org/pypi/pytest-drop-dup-tests
+
 .. image:: https://travis-ci.org/nicoddemus/pytest-drop-dup-tests.svg?branch=master
     :target: https://travis-ci.org/nicoddemus/pytest-drop-dup-tests
     :alt: See Build Status on Travis CI
@@ -14,7 +17,7 @@ A Pytest plugin to drop duplicated tests during collection.
 Pytest by default will collect all tests from directories or files given
 in the command-line. For example, if you execute::
 
-    py.test tests/unit tests
+    py.test tests/unit tests/
 
 Tests from ``tests/unit`` will appear twice, because they will be collected
 again when pytest sees the ``tests`` directory in the command-line.
