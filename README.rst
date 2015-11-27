@@ -9,23 +9,35 @@ pytest-drop-dup-tests
     :target: https://ci.appveyor.com/project/nicoddemus/pytest-drop-dup-tests/branch/master
     :alt: See Build Status on AppVeyor
 
-A Pytest plugin to drop duplicated tests during collection
+A Pytest plugin to drop duplicated tests during collection.
+
+Pytest by default will collect all tests from directories or files given
+in the command-line. For example, if you execute::
+
+    py.test tests/unit tests
+
+Tests from ``tests/unit`` will appear twice, because they will be collected
+again when pytest sees the ``tests`` directory in the command-line.
+
+This plugin is intended for the cases where the user wants to run all tests
+from ``tests/unit`` first and then the rest of the tests under ``tests``,
+without duplicates.
+
+This plugin was born from the discussion taken in `#1187`_.
+
+
+.. _`#1187`: https://github.com/pytest-dev/pytest/issues/1187
 
 ----
 
 This `Pytest`_ plugin was generated with `Cookiecutter`_ along with `@hackebrot`_'s `Cookiecutter-pytest-plugin`_ template.
 
 
-Features
---------
-
-* TODO
-
-
 Requirements
 ------------
 
-* TODO
+* Python 2.7 or 3.4+
+* pytest >= 2.7
 
 
 Installation
@@ -39,7 +51,7 @@ You can install "pytest-drop-dup-tests" via `pip`_ from `PyPI`_::
 Usage
 -----
 
-* TODO
+The plugin is enabled by default, no other action is necessary.
 
 Contributing
 ------------
