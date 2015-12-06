@@ -46,7 +46,7 @@ Requirements
 Installation
 ------------
 
-You can install "pytest-drop-dup-tests" via `pip`_ from `PyPI`_::
+You can install via `pip`_ from `PyPI`_::
 
     $ pip install pytest-drop-dup-tests
 
