@@ -4,3 +4,5 @@ tmp/
 .cache
 .tox
 .env*
+__pycache__/
+*.egg-info/
