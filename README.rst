@@ -4,13 +4,9 @@ pytest-drop-dup-tests
 .. image:: http://img.shields.io/pypi/v/pytest-drop-dup-tests.svg
    :target: https://pypi.python.org/pypi/pytest-drop-dup-tests
 
-.. image:: https://travis-ci.org/nicoddemus/pytest-drop-dup-tests.svg?branch=master
-    :target: https://travis-ci.org/nicoddemus/pytest-drop-dup-tests
-    :alt: See Build Status on Travis CI
+.. |ci| image:: https://github.com/nicoddemus/pytest-drop-dup-tests/workflows/main/badge.svg
+  :target: https://github.com/nicoddemus/pytest-drop-dup-tests/actions
 
-.. image:: https://ci.appveyor.com/api/projects/status/github/nicoddemus/pytest-drop-dup-tests?branch=master
-    :target: https://ci.appveyor.com/project/nicoddemus/pytest-drop-dup-tests/branch/master
-    :alt: See Build Status on AppVeyor
 
 A Pytest plugin to drop duplicated tests during collection.
 
@@ -39,7 +35,7 @@ This `Pytest`_ plugin was generated with `Cookiecutter`_ along with `@hackebrot`
 Requirements
 ------------
 
-* Python 2.7 or 3.4+
+* Python 2.7 or 3.5+
 * pytest >= 2.7
 
 
