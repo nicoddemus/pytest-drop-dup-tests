@@ -6,3 +6,4 @@ tmp/
 .env*
 __pycache__/
 *.egg-info/
+.eggs/
