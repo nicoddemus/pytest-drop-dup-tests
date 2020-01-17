@@ -23,6 +23,8 @@ setup(
     description='A Pytest plugin to drop duplicated tests during collection',
     long_description=read('README.rst'),
     py_modules=['pytest_drop_dup_tests'],
+    setup_requires='setuptools_scm',
+    use_scm_version=True,
     install_requires=['pytest>=2.7'],
     classifiers=[
         'Development Status :: 4 - Beta',
