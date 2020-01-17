@@ -4,7 +4,7 @@ pytest-drop-dup-tests
 .. image:: http://img.shields.io/pypi/v/pytest-drop-dup-tests.svg
    :target: https://pypi.python.org/pypi/pytest-drop-dup-tests
 
-.. |ci| image:: https://github.com/nicoddemus/pytest-drop-dup-tests/workflows/main/badge.svg
+.. image:: https://github.com/nicoddemus/pytest-drop-dup-tests/workflows/main/badge.svg
   :target: https://github.com/nicoddemus/pytest-drop-dup-tests/actions
 
 
