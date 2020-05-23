@@ -1,3 +1,10 @@
+0.3.0
+=====
+
+- Files passed on the command-line are now deduplicated as well (`#5`_).
+
+.. _#5: https://github.com/nicoddemus/pytest-drop-dup-tests/issues/5
+
 0.2.0
 =====
 
