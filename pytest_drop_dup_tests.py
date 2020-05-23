@@ -1,10 +1,8 @@
-
-
 _seen_paths = set()
 
 
 def pytest_ignore_collect(path, config):
-    if path.basename == '__init__.py':
+    if path.basename == "__init__.py":
         return None
     if path in _seen_paths:
         return True
@@ -23,7 +21,6 @@ def pytest_collection_modifyitems(config, items):
             seen_node_ids.add(item.nodeid)
         else:
             deselected_items.append(item)
-            
+
     items[:] = new_items
     config.hook.pytest_deselected(items=deselected_items)
-
