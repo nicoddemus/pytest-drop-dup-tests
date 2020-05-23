@@ -32,13 +32,6 @@ This plugin was born from the discussion taken in `#1187`_.
 This `Pytest`_ plugin was generated with `Cookiecutter`_ along with `@hackebrot`_'s `Cookiecutter-pytest-plugin`_ template.
 
 
-Requirements
-------------
-
-* Python 2.7 or 3.5+
-* pytest >= 2.7
-
-
 Installation
 ------------
 
