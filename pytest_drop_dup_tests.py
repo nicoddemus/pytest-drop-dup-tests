@@ -1,13 +1,17 @@
 _seen_paths = set()
 
 
-def pytest_ignore_collect(path, config):
-    if path.basename == "__init__.py":
+def pytest_configure():
+    _seen_paths.clear()
+
+
+def pytest_ignore_collect(collection_path):
+    if collection_path.name == "__init__.py":
         return None
-    if path in _seen_paths:
+    if collection_path in _seen_paths:
         return True
     else:
-        _seen_paths.add(path)
+        _seen_paths.add(collection_path)
         return None
 
 

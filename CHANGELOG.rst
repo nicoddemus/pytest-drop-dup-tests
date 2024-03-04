@@ -1,3 +1,9 @@
+1.0.0
+=====
+
+- Require pytest >=7.0 and Python >=3.8.
+
+
 0.3.0
 =====
 

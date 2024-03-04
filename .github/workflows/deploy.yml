@@ -1,0 +1,38 @@
+name: deploy
+
+on:
+  push:
+    tags:
+      - "[0-9]+.[0-9]+.[0-9]+"
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Build and Check Package
+        uses: hynek/build-and-inspect-python-package@v1.5
+
+  deploy:
+    needs: package
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Download Package
+      uses: actions/download-artifact@v3
+      with:
+        name: Packages
+        path: dist
+
+    - name: Publish package to PyPI
+      uses: pypa/gh-action-pypi-publish@v1.8.5
+
+    - name: GitHub Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: dist/*
