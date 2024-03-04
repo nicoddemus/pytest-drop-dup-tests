@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-
-
 def test_drop_duplicated_dir(testdir):
     testdir.makepyfile(
         """
@@ -49,11 +46,13 @@ def test_drop_duplicated_files(testdir):
             """,
         }
     )
-    result = testdir.runpytest("tests", "tests/test_foo.py", "-v")
+    result = testdir.runpytest(
+        "tests/test_foo.py", "tests/test_foo.py", "tests/test_bar.py", "-v"
+    )
     result.stdout.fnmatch_lines(
         [
-            "tests/test_bar.py::test_bar *",
             "tests/test_foo.py::test_foo *",
+            "tests/test_bar.py::test_bar *",
             "* 2 passed, 1 deselected in *",
         ]
     )
