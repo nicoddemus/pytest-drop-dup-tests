@@ -18,7 +18,8 @@ jobs:
     needs: package
     runs-on: ubuntu-latest
     permissions:
-      id-token: write
+      id-token: write  # For PyPI trusted publishing.
+      contents: write  # release notes.
 
     steps:
     - uses: actions/checkout@v3
