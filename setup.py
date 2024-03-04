@@ -1,5 +1,6 @@
-import os
 import codecs
+import os
+
 from setuptools import setup
 
 
@@ -17,6 +18,7 @@ setup(
     license="MIT",
     url="https://github.com/nicoddemus/pytest-drop-dup-tests",
     description="A Pytest plugin to drop duplicated tests during collection",
+    long_description_content_type="text/x-rst",
     long_description=read("README.rst"),
     py_modules=["pytest_drop_dup_tests"],
     setup_requires="setuptools_scm",
