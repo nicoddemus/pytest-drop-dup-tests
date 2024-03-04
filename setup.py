@@ -41,5 +41,9 @@ setup(
         "Operating System :: OS Independent",
         "License :: OSI Approved :: MIT License",
     ],
-    entry_points={"pytest11": ["drop-dup-tests = pytest_drop_dup_tests",],},
+    entry_points={
+        "pytest11": [
+            "drop-dup-tests = pytest_drop_dup_tests",
+        ],
+    },
 )

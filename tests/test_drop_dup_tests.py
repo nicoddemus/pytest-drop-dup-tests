@@ -10,7 +10,9 @@ def test_drop_duplicated_dir(testdir):
     )
     result = testdir.runpytest(".", ".")
     result.stdout.fnmatch_lines(
-        ["* 1 passed in *",]
+        [
+            "* 1 passed in *",
+        ]
     )
     assert result.ret == 0
 
@@ -27,7 +29,9 @@ def test_drop_duplicated_pkg(testdir):
     )
     result = testdir.runpytest("pkg", "pkg")
     result.stdout.fnmatch_lines(
-        ["* 1 passed in *",]
+        [
+            "* 1 passed in *",
+        ]
     )
     assert result.ret == 0
 
