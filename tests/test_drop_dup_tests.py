@@ -1,10 +1,8 @@
 def test_drop_duplicated_dir(testdir):
-    testdir.makepyfile(
-        """
+    testdir.makepyfile("""
         def test_foo():
             pass
-        """
-    )
+        """)
     result = testdir.runpytest(".", ".")
     result.stdout.fnmatch_lines(
         [
